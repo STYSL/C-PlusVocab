@@ -17,6 +17,8 @@ The user will be able to quit the program at anytime by entering 'q' */
 //Use the std namespace:
 using namespace std;
 
+const string SENTINEL = "q";
+
 //Begin body with main function:
 int main(){   
     
@@ -47,14 +49,23 @@ int main(){
         {"What is a statement that places data into variables using cin and >> ?: ", "Input read statement"},
         {"What is an output on the standard output device via cout and << ?: ", "Output statement"},*/
 
-    //string input = ""; //DECLARE & SET STRING INPUT VARIABLE TO NULL TO ENTER FLAG-CONTROLLED WHILE LOOP
-    //while (input != "q") 
+    string input; //DECLARE & SET STRING INPUT VARIABLE TO ENTER FLAG-CONTROLLED WHILE LOOP
+    while (input != SENTINEL){
         srand(time(0)); //GENERATE A RANDOM NUMBER WITH SRAND AND RAND. 
         int randomNumber = rand()%12; //USE MODULUS 12 TO LIMIT RANGE TO NUMBER OF QUESTIONS IN MAP.
         string question = keyTermQuestions[randomNumber]; //ASSIGN RANDOMLY SELECTED QUESTION FROM KEY NUMBER TO QUESTION VARIABLE.
-        cout << question << endl; //DISPAY RANDOM QUESTION.
+        cout << question; //DISPAY RANDOM QUESTION
+        cin >> input;  //RECEIVE USER INPUT
+    }//END SENTINEL-CONTROLLED WHILE LOOP
+    
+    return 0; 
+}//END MAIN FUNCTION 
 
- /*       map<int, string> map1 = {{1, "Apple",},
+
+        //SETUP CONDITONS TO TEST IF USER ANSWER IS CORRECT:
+
+
+        /* map<int, string> map1 = {{1, "Apple",},
                                 {2, "Banana",},
                                 {3, "Mango",},
                                 {4, "Raspberry",},
@@ -106,5 +117,4 @@ int main(){
         if (input == "q") //if user inputs 'q', exit program:
             break;
 */
-    return 0; 
-} 
+
