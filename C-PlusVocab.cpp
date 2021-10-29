@@ -1,6 +1,6 @@
-//Program: C-Plus Key Term Checker
+//Program: C-Plus Vocab
 //Author: F.RUSTIQUE JR
-/* This program will prompt a user to enter correct,
+/* This program, as a learning tool, will prompt a user to enter correct,
 matching key word terms with their given definitions.
 The definition will be displayed, one at a time, to the user as a question. 
 The user will be able to quit the program at anytime by entering 'q' */
@@ -56,6 +56,10 @@ int main(){
         string question = keyTermQuestions[randomNumber]; //ASSIGN RANDOMLY SELECTED QUESTION FROM KEY NUMBER TO QUESTION VARIABLE.
         cout << question; //DISPAY RANDOM QUESTION
         cin >> input;  //RECEIVE USER INPUT
+
+    //CODE BLOCK TO CONFIRM IF ANSWER IS CORRECT AND LET USER KNOW.
+    //IF ANSWER IS WRONG, LET USER KNOW WHAT CORRECT ANSWER IS.
+
     }//END SENTINEL-CONTROLLED WHILE LOOP
     
     return 0; 
