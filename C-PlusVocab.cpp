@@ -5,7 +5,7 @@ matching key word terms with their given definitions.
 The definition will be displayed, one at a time, to the user as a question. 
 The user will be able to quit the program at anytime by entering 'q' */
 
-//THIS IS PSEUDOCODE = NON-WORKING PROGRAM:
+//THIS IS PSEUDOCODE. STILL A NON-WORKING PROGRAM:
 
 //BEGIN W/ NECESSARY HEADER NAMES:
 #include <iostream>
@@ -37,6 +37,8 @@ int main(){
     keyTermQuestions.insert(pair<int, string>(11,"What is an output on the standard output device via cout and << ?: "));
     keyTermQuestions.insert(pair<int, string>(12,"What is a predefined ordering for the characters in a set?: "));
 
+    //CREATE MAP OF MATCHING ANSWERS TO QUESTIONS:
+
         /*{"What is a set of step-by-step instructions that accomplish a task?: ", "Algorithm"},
         {"What are programming languages whose instructions more closely resemble the English language?: ", "High-level languages"},
         {"What is user-defined data type?: ","Enumeration"},
@@ -57,8 +59,9 @@ int main(){
         cout << question; //DISPAY RANDOM QUESTION
         cin >> input;  //RECEIVE USER INPUT
 
-    //CODE BLOCK TO CONFIRM IF ANSWER IS CORRECT AND LET USER KNOW.
-    //IF ANSWER IS WRONG, LET USER KNOW WHAT CORRECT ANSWER IS.
+    //CODE BLOCK TO CONFIRM IF ANSWER IS CORRECT AND LET USER KNOW
+    //IF ANSWER IS WRONG, LET USER KNOW WHAT CORRECT ANSWER IS
+    //CYCLE THROUGH QUESTIONS UNLESS USER ENTERS 'q' TO QUIT
 
     }//END SENTINEL-CONTROLLED WHILE LOOP
     
@@ -67,58 +70,4 @@ int main(){
 
 
         //SETUP CONDITONS TO TEST IF USER ANSWER IS CORRECT:
-
-
-        /* map<int, string> map1 = {{1, "Apple",},
-                                {2, "Banana",},
-                                {3, "Mango",},
-                                {4, "Raspberry",},
-                                {5, "Blackberry",},
-                                {6, "Cocoa",}};
-
-        //The key-value pairs will be the key term description as a question matched with the correct key term.
-        // * Will need to know how to create this in C++, possibly as a "map"?:
-        //Source for how to:  https://www.freecodecamp.org/news/c-plus-plus-map-explained-with-examples/
-        //https://www.udacity.com/blog/2020/03/c-maps-explained.html
-        //Also use course book...
-    
-    //While loop will keep prompting user until either 'y' or 'q' is entered for "input":
-    input = "null"; //input initialized to "null" to enter while loop:
-    while (input != "y" || input != "q")
-        //Within while loop, greet and prompt user to begin quiz or quit with 'y' or 'q':
-        cout << "Hello. This is the Key Term Checker. Enter 'y' to begin or 'q' to quit: " << endl; 
-        cin >> input; //if user input equals "y", begin quiz:
-        if (input == "y") { 
-            //A while loop will randomly select from "keyTermQuestions" and display a question, one at a time until user enters "q" to quit:
-            while (input != "q")
-                //assign a randomly selected keyTermQuestions to "question"
-                question = rand(keyTermQuestions);
-                // display random question from keyTermQuestions w/ prompt for input:
-                cout << question << endl;
-                cout << "Enter response or 'q' to quit: "; 
-                cin >> input; //User enters response or 'q' to quit:
-                //If answer is correct, acknowledge, then next "keyTermQuestion" is randomly selected and displayed, 
-                if (input == is correct matching value for keyTermsQuestion){
-                    cout << "Correct!" << endl;
-                    continue; // command to continue and randomly select another question
-                } 
-                while (input != is not correct matching value from keyTermQuestions || or input != "q"){
-                    cout << "That is incorrect" << endl;
-                    //Display the same, presently selected question:
-                    cout << question << endl;
-                    cout << "Enter response or 'q' to quit: " << endl;
-                    cin >> input;
-                    if (input == "q")
-                        break; //exit while loop and program
-                    if (input == is correct matching value for keyTermsQuestion){
-                        cout << "Correct!" << endl;
-                        continue; //exit this while loop to go back and ask a new question
-                    }
-                }
-                if (input == "q") //if input is 'q', exit program:  
-                    break;            
-        }
-        if (input == "q") //if user inputs 'q', exit program:
-            break;
-*/
 
